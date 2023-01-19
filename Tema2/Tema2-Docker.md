@@ -46,4 +46,14 @@ docker ps -a
 
 ![](assets/ejercicio3.png)
 
+4. Comprueba el tamaño del contenedor en el disco duro.
 
+Comprobamos ahora el tamaño del contenedor que acabamos de crear. La opción -s es size lo que indica el tamaño:
+
+```bash
+docker ps -a -s
+```
+
+![](assets/ejercicio4.png)
+
+Indica que nuestro espacio real del contenedor es de 2B y en virtual 453MB que incluye el tamaño de la imagen de php:7.4-apache.
