@@ -87,3 +87,11 @@ Comprobamos en nuestro navegador la salida de nuestro fichero con la ip y el fic
 
 ![](assets/ejercicio5-parte4.png)
 
+6. Vuelve a comprobar el espacio ocupado por el contenedor.
+
+```bash
+docker ps -a -s
+````
+![](assets/ejercicio6.png)
+
+Ahora el tamaño ha cambiado. Ha aumentado el tamaño que ocupa el espacio real del contenedor a: 19.8MB y en virtual a: 472MB.
