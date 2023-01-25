@@ -57,3 +57,33 @@ docker ps -a -s
 ![](assets/ejercicio4.png)
 
 Indica que nuestro espacio real del contenedor es de 2B y en virtual 453MB que incluye el tamaño de la imagen de php:7.4-apache.
+
+5.  Con la instrucción docker cp podemos copiar ficheros a o desde un contenedor. Puedesencontrar información es esta página. Crea un fichero en tu ordenador, con el siguiente contenido: "<?php echo phpinfo(); ?>" Copia un fichero info.php al directorio /var/www/html del contenedor con docker cp.
+
+Creamos el archivo en nuestro repositorio local.
+
+```bash
+sudo touch info.php
+sudo nano info.php
+ls
+```
+
+![](assets/ejercicio5-parte1.png)
+
+Copiamos el fichero en nuestro contenedor. Primero aseguramos el nombre de nuestro contenedor. Copiamos el archivo de nuestro repositorio a nuestro contenedor.
+
+```bash
+docker ps -a
+docker cp ~/info.php contenedor-php:/var/www/html
+```
+
+![](assets/ejercicio5-parte2.png)
+
+Comprobamos en nuestro contenedor que está el fichero y el contenido:
+
+![](assets/ejercicio5-parte3.png)
+
+Comprobamos en nuestro navegador la salida de nuestro fichero con la ip y el fichero en la url.
+
+![](assets/ejercicio5-parte4.png)
+
