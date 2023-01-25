@@ -95,3 +95,12 @@ docker ps -a -s
 ![](assets/ejercicio6.png)
 
 Ahora el tamaño ha cambiado. Ha aumentado el tamaño que ocupa el espacio real del contenedor a: 19.8MB y en virtual a: 472MB.
+
+7. Accede al fichero info.php desde su navegador.
+
+Entramos en el navegador con nuestra ip y enlazamos con el fichero info.php y nos muestra lo siguiente:
+
+```url
+172.17.0.2/info.php
+````
+![](assets/ejercicio7.png)
