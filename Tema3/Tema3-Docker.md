@@ -114,3 +114,11 @@ Comprobamos que se ha creado correctamente.
 docker ps -a
 ```
 ![](assets/ejercicio6.png)
+
+7. Accede al contenedor desde el navegador para ver la información ofrecida por el ficheroindex.html. ¿Seguía existiendo ese fichero?
+
+Si porque solo habiamos borrado el contenedor y no el volumen.
+
+![](assets/ejercicio7-1.png)
+
+![](assets/ejercicio7-2.png)
