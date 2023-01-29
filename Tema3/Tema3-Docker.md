@@ -100,3 +100,17 @@ docker rm contenedor-miweb
 docker ps -a
 ```
 ![](assets/ejercicio5.png)
+
+6. Crea un nuevo contenedor y monta el mismo volumen como en el ejercicio anterior.
+
+Volvemos a crear el contenedor con el mismo volumen
+
+```bash
+docker run -d --name contenedor-miweb -v miweb:/var/www/html php:7.4-apache
+```
+Comprobamos que se ha creado correctamente.
+
+```bash 
+docker ps -a
+```
+![](assets/ejercicio6.png)
