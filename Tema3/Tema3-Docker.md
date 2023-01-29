@@ -169,5 +169,16 @@ nos ofrece nuestro fichero index.html
 
 ![](assets/Parte2/ejercicio3-1.png)
 
+4. Modifica el contenido del fichero index.html en tu host y comprueba que al refrescar lapágina ofrecida por el contenedor, el contenido ha cambiado.
 
+Modificamos el fichero index.html, de nuestro directorio y comprobamos que se han hecho los cambios en el fichero.
 
+```bash
+echo "<h1>Adios</h1>" > ~/web/index.html
+cat ~/web/index.html
+```
+![](assets/Parte2/ejercicio4.png)
+
+Refrescamos el navegador y comprobamos si también se ha producido el cambio.
+
+![](assets/Parte2/ejercicio4-1.png)
