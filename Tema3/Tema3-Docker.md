@@ -59,3 +59,44 @@ Dentro del contenedor hacemos un ```ls``` para comprobar el contenido que hay en
 Salimos del contenedor con el comando ``` exit``` y comprobamos que el fichero también está donde lo creamos, ```ls```.
 
 ![](assets/ejercicio3-5.png)
+
+4. Accede al contenedor desde el navegador para ver la información ofrecida por el fichero index.html
+
+Entramos en el contenedor
+
+```bash
+docker exec -ti contenedor-miweb /bin/bash
+```
+Y comprobamos lo que dice el fichero 
+
+```bash
+cat index.html
+```
+
+![](assets/ejercicio4.png)
+
+5. Borra el contenedor
+
+Primero comprobamos que el contenedor está parado para cerrarlo.
+
+```bash
+docker ps -a
+```
+Al estar en marcha paramos el contenedor
+
+```bash 
+docker stop contenedor-miweb
+```
+Comprobamos que realmente se ha parado
+
+```bash 
+docker ps -a
+```
+
+Borramos el contenedor y comprobamos que se ha borrado 
+
+```bash
+docker rm contenedor-miweb
+docker ps -a
+```
+![](assets/ejercicio5.png)
