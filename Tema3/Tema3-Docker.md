@@ -145,3 +145,19 @@ nano index.html
 ![](assets/ejercicio1-1-b1.png)
 ![](assets/ejercicio1-1-b.png)
 
+2. Crea un contenedor desde la imagen php:7.4-apache donde montes en el directorio/var/www/html el directorio que has creado por medio de bind mount.
+
+```bash
+docker run -d --name container-php -v /home/$USER/web:/var/www/html -p 8080:80 php:7.4-apache
+```
+Y hacemos un curl a nuestra ip en ese puerto para ver la salida:
+
+```bash
+curl http://localhost:8080
+```
+
+![](assets/ejercicio2-1.png)
+
+
+
+
