@@ -182,3 +182,17 @@ cat ~/web/index.html
 Refrescamos el navegador y comprobamos si también se ha producido el cambio.
 
 ![](assets/Parte2/ejercicio4-1.png)
+
+5. Borra el contenedor
+
+Borramos el contenedor, forzandolo ya que está inicializado con el -f:
+
+```bash
+docker rm -f container-php
+```
+Y comprobamos que se ha borrado correctamente 
+
+```bash
+docker ps -a
+```
+![](assets/Parte2/ejercicio5-5png.png)
