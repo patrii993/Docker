@@ -122,3 +122,26 @@ Si, porque solo habíamos borrado el contenedor y no el volumen.
 ![](assets/ejercicio7-1.png)
 
 ![](assets/ejercicio7-2.png)
+
+Vamos a trabajar con bind mount:
+
+1. Crea un directorio en tu host y dentro crea un fichero index.html.
+
+Accedemos al root y nos colocamos en nuestro directorio /home/daw.
+
+Creamos un directorio que lo llamaremos web y nos metemos en él.
+```bash
+mkdir web
+cd web
+```
+![](assets/ejercicio1-1-a.png)
+
+Creamos un fichero index.html
+
+```bash
+nano index.html
+```
+
+![](assets/ejercicio1-1-b1.png)
+![](assets/ejercicio1-1-b.png)
+
