@@ -196,3 +196,19 @@ Y comprobamos que se ha borrado correctamente
 docker ps -a
 ```
 ![](assets/Parte2/ejercicio5-5png.png)
+
+6. Crea un nuevo contenedor y monta el mismo directorio como en el ejercicio anterior.
+
+Creamos otro contenedor como la otra vez, enlazando el directorio.
+
+```bash
+docker run -d --name c-php -v /home/$USER/web:/var/www/html -p 8080:80 php:7.4-apache
+```
+Comprobamos que se ha creado el contenedor
+
+```bash
+docker ps -a
+```
+![](assets/Parte2/ejercicio6-6.png)
+
+
