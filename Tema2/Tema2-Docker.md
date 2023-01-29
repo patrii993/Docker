@@ -104,3 +104,4 @@ Entramos en el navegador con nuestra ip y enlazamos con el fichero info.php y no
 172.17.0.2/info.php
 ````
 ![](assets/ejercicio7.png)
+
