@@ -119,9 +119,7 @@ docker ps -a
 
 Si, porque solo habíamos borrado el contenedor y no el volumen.
 
-![](assets/Parte1/ejercicio7-1.png)
-
-![](assets/Parte1/ejercicio7-2.png)
+![](assets/Parte1/ejercicio7.png)
 
 Vamos a trabajar con bind mount:
 
@@ -145,7 +143,7 @@ nano index.html
 ![](assets/Parte2/ejercicio1-1-b1.png)
 ![](assets/Parte2/ejercicio1-1-b.png)
 
-2. Crea un contenedor desde la imagen php:7.4-apache donde montes en el directorio/var/www/html el directorio que has creado por medio de bind mount.
+2. Crea un contenedor desde la imagen php:7.4-apache donde montes en el directorio /var/www/html el directorio que has creado por medio de bind mount.
 
 ```bash
 docker run -d --name container-php -v /home/$USER/web:/var/www/html -p 8080:80 php:7.4-apache
@@ -158,7 +156,7 @@ curl http://localhost:8080
 
 ![](assets/Parte2/ejercicio2-1.png)
 
-3. Accede al contenedor desde el navegador para ver la información ofrecida por el ficheroindex.html.
+3. Accede al contenedor desde el navegador para ver la información ofrecida por el fichero index.html.
 
 Accedemos al navegador para comprobar que la ip 
 
@@ -169,7 +167,7 @@ nos ofrece nuestro fichero index.html
 
 ![](assets/Parte2/ejercicio3-1.png)
 
-4. Modifica el contenido del fichero index.html en tu host y comprueba que al refrescar lapágina ofrecida por el contenedor, el contenido ha cambiado.
+4. Modifica el contenido del fichero index.html en tu host y comprueba que al refrescar la página ofrecida por el contenedor, el contenido ha cambiado.
 
 Modificamos el fichero index.html, de nuestro directorio y comprobamos que se han hecho los cambios en el fichero.
 
@@ -211,4 +209,24 @@ docker ps -a
 ```
 ![](assets/Parte2/ejercicio6-6.png)
 
+7. Accede al contenedor desde el navegador para ver la información ofrecida por el fichero index.html. ¿Se sigue viendo el mismo contenido?
 
+Primero hacemos un curl para comprobar que sigue recibiendo el fichero index. html.
+
+```bash
+curl http://localhost:8080
+```
+![](assets/Parte2/ejercicio7-7.png)
+
+ Accedemos al navegador para comprobar que la ip 
+
+```url 
+172.17.0.1:8080
+```
+nos ofrece nuestro fichero index.html
+
+![](assets/Parte2/ejercicio7-7-1.png)
+
+Si, porque el volumen no se ha borrado y la información es persistente.
+
+Los Volumenes docker y los bind mount almanecenan información persistente lo que lo diferencia de un contenedor cuya información es efímera y depende de la inicialización o la salida de este.
