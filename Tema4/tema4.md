@@ -40,6 +40,30 @@ docker run -it --name u1 --network red1 --ip 172.28.0.10 --hostname host1 ubuntu
 ```
 ![](assets/ejercicio2.png)
 
+Comprobamos el contenedor:
+
+![](assets/ejercicio2-1.png)
+
+3. Entrar en ese contenedor e instalar la aplicación ping ( apt update && apt install
+inetutils-ping ).
+
+Dentro del contenedor ponemos los siguientes comandos:
+
+```bash
+apt-get update -y
+apt-get install -y iputils-ping
+````
+![](assets/ejercicio3.png)
+
+Probamos que funciona perfectamente
+
+![](assets/ejercicio3-1.png)
+
+
+
+
+
+
 
 
 
