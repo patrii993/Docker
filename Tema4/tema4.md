@@ -28,5 +28,21 @@ docker network create -d bridge red2
 
 ![](assets/ejercicio1-red2.png)
 
+2. Poner en ejecución un contenedor de la imagen ubuntu:20.04 que tenga como hostname
+host1 , como IP 172.28.0.10 y que esté conectado a la red1. Lo llamaremos u1.
+
+Creamos un contenedor interactivo, para poder trabajar en él con el nombre u1 y con la red1 que hemos creado en el ejercicio anterior. 
+
+La ip es la 172.28.0.10, el hostname le ponemos el nombre de host1, si no se lo ponemos sería el nombre de la IDy usamos la imagen de ubuntu:20.04.
+
+```bash 
+docker run -it --name u1 --network red1 --ip 172.28.0.10 --hostname host1 ubuntu:20.04
+```
+![](assets/ejercicio2.png)
+
+
+
+
+
 
 
