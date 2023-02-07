@@ -40,6 +40,15 @@ docker run -it --name u1 --network red1 --ip 172.28.0.10 --hostname host1 ubuntu
 ```
 ![](assets/ejercicio2.png)
 
+Comprobamos el contenedor:
+
+![](assets/ejercicio2-1.png)
+
+
+
+
+
+
 
 
 
