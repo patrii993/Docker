@@ -74,4 +74,17 @@ Comprobamos el contenedor:
 
 ![](assets/ejercicio4-2.png)
 
+5. Entrar en ese contenedor e instalar la aplicación ping ( apt update && apt install inetutils-ping ).
 
+Dentro del contenedor ponemos los siguientes comandos:
+
+```bash
+apt-get update -y
+apt-get install -y iputils-ping
+````
+
+![](assets/ejercicio5.png)
+
+Comprobamos que funciona correctamente haciendo un ping sobre la propia ip 172.19.0.2
+
+![](assets/ejercicio5-1.png)
