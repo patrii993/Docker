@@ -59,14 +59,19 @@ Probamos que funciona perfectamente
 
 ![](assets/ejercicio3-1.png)
 
+4. Poner en ejecución un contenedor de la imagen ubuntu:20.04 que tenga como hostname
+host2 y que esté conectado a la red2. En este caso será docker el que le de una IP correspondiente a esa red. Lo llamaremos u2.
 
+Creamos un contenedor definiendo el nombre del contenedor: u2, el nombre del host: host2 y le añadimos la red: red2. La ip se la da el propio docker (la red2 se creo con una ip que le proporcionaba docker, no se le añadió ninguna)
 
+```bash
+docker run -it --name u2 --network red2 --hostname host2 ubuntu:20.04
+```
 
+![](assets/ejercicio4-1.png)
 
+Comprobamos el contenedor:
 
-
-
-
-
+![](assets/ejercicio4-2.png)
 
 
